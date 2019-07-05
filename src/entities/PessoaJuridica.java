@@ -25,12 +25,12 @@ public class PessoaJuridica extends Pessoa {
 	//Métodos:
 	@Override
 	public Double calcImposto() {
-		Double valorLiquido;
+		Double valorImposto;
 		if(numFuncionarios > 10) {
-			valorLiquido = getRendaAnual() - (getRendaAnual() * 0.14);
+			valorImposto = getRendaAnual() * 0.14;
 		}else {
-			valorLiquido = getRendaAnual() - (getRendaAnual() * 0.16);
+			valorImposto = getRendaAnual() * 0.16;
 		}
-		return valorLiquido;
+		return valorImposto;
 	}
 }
